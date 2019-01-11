@@ -9,20 +9,37 @@
 <body>
     <h1>Example Page</h1>
     <p>This is an example page for hands-on.</p>
-    <h2>attr Test</h2>
+    <h2>"attr" Test</h2>
     <ul>
         <li><a href="https://twitter.com/">Twitter</a></li>
         <li><a href="https://www.facebook.com/">Facebook</a></li>
         <li><a href="https://www.instagram.com/">Instagram</a></li>
     </ul>
-    <h2>ID Test</h2>
+    <h2>"id" Test</h2>
     <p id="id-test">id="id-test" selected</p>
-    <h2>class Test</h2>
+    <h2>"class" Test</h2>
     <ul>
         <li class="class-test">class="class-test" selected 001</li>
         <li class="class-test">class="class-test" selected 002</li>
         <li class="class-test">class="class-test" selected 003</li>
     </ul>
+    <h2>"input" Test</h2>
+    <h3>Input</h3>
+        <form action="" id="id_form">
+            <input type="text" name="input-text" id="id_text" placeholder="Put Your Name!">
+        </form>
+        <button onclick="showResult()">Submit</button>
+    <h3>Output</h3>
+    <p id="result">What's your name?</p>
+
+
     <footer>@don-bu-rakko All Rights Reserved.</footer>
+    <script>
+        function showResult(){
+            const name = document.forms.id_form.id_text.value;
+            const target = document.getElementById('result')
+            target.innerHTML = 'Hello, ' + name
+        }
+    </script>
 </body>
 </html>
